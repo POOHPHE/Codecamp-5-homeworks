@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #turbo{
+            
+            animation: turbo 3s linear 1s infinite alternate ;
+            color:black;
+            visibility: visible;
+            position: relative;
+            left: 0px;
+            top: 0px;
+            font-size: 100px;
+        }
+        @keyframes turbo{
+            0%{
+                color: black;
+            }
+            20%{
+                color: blueviolet;
+                left: 1500px;
+            }
+            40%{
+                visibility: hidden;
+                left: 0px;
+            }
+            60%{
+                visibility: visible;
+                top: 500px;
+            }
+            80%{
+                color: brown;
+                top: 0px;
+            }
+            100%{
+                top: 700px;
+                left: 700px;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p id="turbo">FAST</p>
+</body>
+</html>

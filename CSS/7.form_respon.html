@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-form-1{
+            display: grid;
+            grid-template-columns: auto;
+            border: 3pt dotted red;
+            
+        }
+        @media screen and (min-width: 1200px){
+            .grid-form-2{
+            display: grid;
+            grid-template-columns: auto auto;
+            border: 3pt dotted red;
+            
+            }
+            .grid-container{
+               
+                margin-left: 7.5%;
+                margin-right: 7.5%;
+                display: grid;
+                grid-template-columns: auto auto;
+                 grid-gap: 50px;
+            }
+        }
+        @media screen and (max-width: 1200px){
+            .grid-form-2{
+            display: grid;
+            grid-template-columns: auto;
+            border: 3pt dotted red;
+           
+            }
+            .grid-container{
+                margin-left: 7.5%;
+                margin-right: 7.5%;
+                
+                display: grid;
+                grid-template-columns: auto;
+                grid-gap: 50px;
+            }
+        }
+
+        
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: left;
+            max-width: 100%;
+        }
+        input{
+            width: 100%;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: aqua;margin-left: 7.5%;  margin-right: 7.5%;">
+
+        <form class="grid-form-2" action="">
+        <div class="grid-item">Your Name<br><input type="text"></div>
+        <div class="grid-item">Your Email<br><input type="text"></div>
+    </form>
+    <form class="grid-form-1" action="">
+        <div class="grid-item">Subject<br><input type="text"></div>
+        <div class="grid-item">Your Message<br><input type="textarea" style="height: 200px;"></div>
+        <input type="button" value="SEND" style="background-color: red; width: 100px; color: white;font-weight: bold;margin-left: 45%;">
+    </form>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item" style="max-width: 500px;"><h2>Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta...
+        </h2><br>Most people would prefer being the protagonist of a world full of adventure, be it in a game or in another world. But, unfortunately, a certain girl is not so lucky. Regaining the memories of her past life, she realizes that she was reborn in the world of Fortune Lover—one of the games she used to play.
+
+            Unfortunately, the character she was reincarnated into—Katarina Claes—is the game's main antagonist, who faces utter doom in every ending. Using her extensive knowledge of the game, she takes it upon herself to escape from the chains of this accursed destiny.
+            
+            However, this will not be an easy feat, especially since she needs to be cautious as to not set off death flags that may speed up the impending doom she is trying to avoid. Even so, to make a change that will affect the lives of everyone around her, she strives—not as the heroine—but as the villainess.
+            </div> 
+                   <div class="grid-item" style="max-width: 500px;"><h2>Fugou Keiji: Balance:Unlimited</h2><br>Daisuke Kanbe, a detective with extraordinary assets, is assigned to the Modern Crime Prevention Headquarters, where only those who have caused problems for the Metropolitan Police Department are sent. There, Daisuke is partnered with Haru Katou. Haru is repulsed by Daisuke's material ways, believing that money isn't everything. Challenging mysteries unfold in front of the two detectives, and they must work together to solve them.</div>
+
+        <div class="grid-item" style="max-width: 500px;"><h2>Yesterday wo Utatte</h2><br><p>After college, Rikuo Uozumi, a boy without much ambition in life, takes on a job at a convenience store. The days pass by uneventfully for Rikuo until he meets his former girlfriend and classmate, but especially thanks to the unusual Haru Nonaka, and her pet raven...</p></div>
+        
+    </div>
+
+</body>
+</html>
