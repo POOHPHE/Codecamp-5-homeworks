@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #like0 {
+          background-color: wheat;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        #like1 {
+          background-color: blue;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function Like(){
+            $('#like0').click(function() {
+                $(this).attr('id', 'like1');
+            });
+             $('#like1').click(function() {
+                $(this).attr('id', 'like0');
+            });
+        }
+        function appendPost(){
+            var d = new Date();
+            var n = d.toString();
+            var text = $('textarea#text').val();
+            var img_url = $('#url').val();
+            if(img_url!=""){
+                $("#main").prepend(`<div><p>${text}</p><p>${n}</p><img src="${img_url}  "><br><button id="like0" onclick="Like()">Like</button></div>`);
+            
+            $("img").css("width","200px");
+            }
+            else{
+                $("#main").prepend(`<div><p>${text}</p><p>${n}</p><button id="like0" onclick="Like()">Like</button></div>`);
+
+            }
+        }
+        </script>
+   
+</head>
+<body>
+    
+       
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <br>
+        <input type="text" name="image" id="url">
+        <button onclick="appendPost()">Post</button>
+    <div id="main">This is the end.
+    </div>
+    
+
+
+
+</body>
+</html>
